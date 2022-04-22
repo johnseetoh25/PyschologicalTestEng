@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <?!= include('JavaScript'); ?>   
+    </head>
+
+    <body>  
+      <div class="container-fluid p-5">
+        <form id="myForm" onsubmit="handleFormSubmit(this)">
+          <!--Grid Cards-->
+          <div class="row row-cols-1 row-cols-md-2">
+
+            <!--问卷例子 -->
+
+            <div class="col my-2">
+              <div class="form-group my-3">
+                <div class="card">
+                  <div class="card-header">Question 1</div>
+                  <div class="card-body">
+                    <div class="card-text">Do you think the programming or coding is a cool thing?</div>
+
+                     <!--one answer only used radio-->
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="Question01" id="Q01A01" value="Yes">
+                      <label class="form-check-label" for="Q01A01">Yes</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="Question01" id="Q01A02" value="No">
+                      <label class="form-check-label" for="Q01A02">No</label>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col my-2">
+              <div class="form-group my-3">
+                <div class="card">
+                  <div class="card-header">Question 2</div>
+                  <div class="card-body">
+                    <div class="card-text">What do you when you want to browsing the banned websites (for example, dark web, P web, etc.)</div>
+                    
+                    <!--multi chossen used checkbox-->
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question02Answer01" id="Question02Answer01" value="Give up directly">
+                      <label class="form-check-label" for="Give Up Directly">Give up directly</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question02Answer02" id="Question02Answer02" value="Switch On VPN, then try to browsing the banned again">
+                      <label class="form-check-label" for="Switch On VPN, then try to browsing the banned again">Switch On VPN, then try to browsing the banned again</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question02Answer03" id="Question02Answer03" value="try to browsing the unbanned websites">
+                      <label class="form-check-label" for="try to browsing the unbanned websites">try to browsing the unbanned websites</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question02Answer04" id="Question02Answer04" value="use other ways to try browsing the banned websites">
+                      <label class="form-check-label" for="use other ways to try browsing the banned websites">use other ways to try browsing the banned websites</label>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col my-2">
+              <div class="form-group my-3">
+                <div class="card">
+                  <div class="card-header">Question 3</div>
+                  <div class="card-body">
+                    <div class="card-text">What you do when you accidentally download the rogue software or harmful computer virus</div>
+                    
+                    <!--multi chossen used checkbox-->
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question03Answer01" id="Question03Answer01" value="Try to removing or repairing by yourself">
+                      <label class="form-check-label" for="Try to removing or repairing by yourself">Try to removing or repairing by yourself</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question03Answer02" id="Question03Answer02" value="Hurry to the nearest computer shop and require the technician help  to repair it">
+                      <label class="form-check-label" for="Hurry to the nearest computer shop and require the technician help  to repair it">Hurry to the nearest computer shop and require the technician help  to repair it</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question03Answer03" id="Question03Answer03" value="Don't be afraid, because you have downloaded antivirus software">
+                      <label class="form-check-label" for="Don't be afraid, because you have downloaded antivirus software">Don't be afraid, because you have downloaded antivirus software</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question03Answer04" id="Question03Answer04" value="Just throw it away and let it drain slowly">
+                      <label class="form-check-label" for="Just throw it away and let it drain slowly">Just throw it away and let it drain slowly</label>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col my-2">
+              <div class="form-group my-3">
+                <div class="card">
+                  <div class="card-header">Question 4</div>
+                  <div class="card-body">
+                    <div class="card-text">Which tech company's product launch are you most expect to?</div>
+                    
+                    <!--multi chossen used checkbox-->
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question04Answer01" id="Question04Answer01" value="Apple">
+                      <label class="form-check-label" for="Apple">Apple</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question04Answer02" id="Question04Answer02" value="Huawei">
+                      <label class="form-check-label" for="Huawei">Huawei</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question04Answer03" id="Question04Answer03" value="XiaoMi">
+                      <label class="form-check-label" for="XiaoMi">XiaoMi</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question04Answer04" id="Question04Answer04" value="Others tech company">
+                      <label class="form-check-label" for="Others tech company">Others tech company</label>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col my-2">
+              <div class="form-group my-3">
+                <div class="card">
+                  <div class="card-header">Question 5</div>
+                  <div class="card-body">
+                    <div class="card-text">Which browser do you use most often</div>
+                    
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question05Answer01" id="Question05Answer01" value="Google Chrome">
+                      <label class="form-check-label" for="Google Chrome">Google Chrome</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question05Answer02" id="Question05Answer02" value="Microsoft Edge">
+                      <label class="form-check-label" for="Microsoft Edge">Microsoft Edge</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question05Answer03" id="Question05Answer03" value="Mozilla Firefox">
+                      <label class="form-check-label" for="Mozilla Firefox">Mozilla Firefox</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question05Answer04" id="Question05Answer04" value="Apple Safari">
+                      <label class="form-check-label" for="Apple Safari">Apple Safari</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question05Answer05" id="Question05Answer05" value="UC browser">
+                      <label class="form-check-label" for="UC browser">UC browser</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question05Answer06" id="Question05Answer06" value="Others browser">
+                      <label class="form-check-label" for="Others browser">Others browser</label>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col my-2">
+              <div class="form-group my-3">
+                <div class="card">
+                  <div class="card-header">Question 6</div>
+                  <div class="card-body">
+                    <div class="card-text">Which famous person in technology do you like?</div>
+                    
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question06Answer01" id="Question06Answer01" value="Elon Musk">
+                      <label class="form-check-label" for="Elon Musk">Elon Musk (Tesla, SpaceX)</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question06Answer02" id="Question06Answer02" value="Steve Jobs">
+                      <label class="form-check-label" for="Steve Jobs">Steve Jobs (Apple)</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question06Answer03" id="Question06Answer03" value="Bill Gates">
+                      <label class="form-check-label" for="Bill Gates">Bill Gates （Mircosoft, Window）</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question06Answer04" id="Question06Answer04" value="Linus Torvalds">
+                      <label class="form-check-label" for="Linus Torvalds">Linus Torvalds (Linux)</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question06Answer05" id="Question06Answer05" value="Andy Rubin">
+                      <label class="form-check-label" for="Andy Rubin">Andy Rubin (Android)</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question06Answer06" id="Question06Answer06" value="Kevin Mitnick">
+                      <label class="form-check-label" for="Kevin Mitnick">Kevin Mitnick （Popular Hackers)</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question06Answer07" id="Question06Answer07" value="Ren ZhengFei or Richard Yu">
+                      <label class="form-check-label" for="Ren ZhengFei or Richard Yu">Ren ZhengFei, Richard Yu [任正非,余承东]（Huawei)</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question06Answer08" id="Question06Answer08" value="Lei Jun">
+                      <label class="form-check-label" for="Lei Jun">Lei Jun [雷军]（XiaoMi)</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question06Answer09" id="Question06Answer09" value="Others people">
+                      <label class="form-check-label" for="Others people">Others</label>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col my-2">
+              <div class="form-group my-3">
+                <div class="card">
+                  <div class="card-header">Question 7</div>
+                  <div class="card-body">
+                    <div class="card-text">Do you think the Metaverse will be able to launch into the market?</div>
+
+                     <!--one answer only used radio-->
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="Question07" id="Q07A01" value="Yes, I believe that the current technology can achieve">
+                      <label class="form-check-label" for="Q07A01">Yes, I believe that the current technology can achieve</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="Question07" id="Q07A02" value="No, the technology is limited, it just changes the appearance of the old technology">
+                      <label class="form-check-label" for="Q07A02">No, the technology is limited, it just changes the appearance of the old technology</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="Question07" id="Q07A03" value="never heard about Metaverse">
+                      <label class="form-check-label" for="Q07A03">never heard about Metaverse</label>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col my-2">
+              <div class="form-group my-3">
+                <div class="card">
+                  <div class="card-header">Question 8</div>
+                  <div class="card-body">
+                    <div class="card-text">What do you think about Windows 11</div>
+                    
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question08Answer01" id="Question08Answer01" value="Better to use than Windows 10">
+                      <label class="form-check-label" for="Better to use than Windows 10">Better to use than Windows 10</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question08Answer02" id="Question08Answer02" value="More laggy than Window 10">
+                      <label class="form-check-label" for="More laggy than Window 10">More laggy than Window 10</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question08Answer03" id="Question08Answer03" value="Only the UI design has been changed, and other functions have not changed">
+                      <label class="form-check-label" for="Only the UI design has been changed, and other functions have not changed">Only the UI design has been changed, and other functions have not changed</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Question08Answer04" id="Question08Answer04" value="I haven not dared to upgrade to Window 11 yet, for fear of any various problems">
+                      <label class="form-check-label" for="I haven not dared to upgrade to Window 11 yet, for fear of any various problems">I haven't dared to upgrade to Window 11 yet, for fear of any various problems</label>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col my-2">
+              <div class="form-group my-3">
+                <div class="card">
+                  <div class="card-header">Question 9</div>
+                  <div class="card-body">
+                    <div class="card-text">When you learn computer skills, will you be willing to share your learning with others?</div>
+
+                     <!--one answer only used radio-->
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="Question09" id="Q09A01" value="Yes">
+                      <label class="form-check-label" for="Q09A01">Yes</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="Question09" id="Q09A02" value="No">
+                      <label class="form-check-label" for="Q09A02">No</label>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col my-2">
+              <div class="form-group my-3">
+                <div class="card">
+                  <div class="card-header">Question 10</div>
+                  <div class="card-body">
+                    <div class="card-text">When you buy a new computer, what kind of configuration do you care about most?</div>
+
+                     <!--one answer only used radio-->
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="Question10" id="Q10A01" value="Processor">
+                      <label class="form-check-label" for="Q10A01">Processor</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="Question10" id="Q10A02" value="Graphics Card">
+                      <label class="form-check-label" for="Q10A02">Graphics Card</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="Question10" id="Q10A03" value="RAM">
+                      <label class="form-check-label" for="Q10A03">RAM(Memory)</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="Question10" id="Q10A04" value="Others Spec">
+                      <label class="form-check-label" for="Q10A04">Others</label>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+                        
+          </div>
+
+          <!--Done Button-->
+          <div class="row">
+            <button id="done" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#myModal">Done</button>
+
+            <!-- The Modal -->
+            <div class="modal fade" id="myModal">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  
+                  <div class="modal-header">
+                    <h4 class="modal-title">Personal Information</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+
+                  <div class="modal-body">
+                    <div class="container"> 
+                      <h3>Thank You for your participation</h3>
+                    </div>
+
+                    <div class="container">
+                      <div class="mb-3">  
+                          <label for="name">Name</label>
+                          <input id="name" name="Name" type="text" class="form-control" placeholder="Fill in Your Name">
+                      </div>
+                      
+                      <div class="mb-3">
+                          <label for="contact">Phone Number</label>
+                          <input id="contact" name="PhoneNumber" type="text" class="form-control" placeholder="Fill in Your Phone Number">
+                      </div>
+                      
+                      <div class="mb-3">
+                          <label for="email">Email</label>
+                          <input id="email" name="Email" type="text" class="form-control" placeholder="Fill in Your Email address">
+                      </div>
+
+                      <div class="mb-3 text-center d-grid gap-2 col-2 mx-auto">
+                          <input type="submit" class="btn btn-primary" value="Submit">
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+        </form>
+      </div>
+
+    </body>
+
+</html>
+
+
